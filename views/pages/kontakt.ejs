@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matkaklubi - kontakt</title>
+    
+    <%- include ("../partials/header.ejs") %>
+    
+    <script src="./matkaklubi.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <%- include ("../partials/matka_pais.ejs") %>
+
+        <div class="kontakt-sisu">
+            <h2>Võta meiega ühendust</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nimi">Nimi</label>
+                    <input placeholder="sinu nimi ..." type="text" class="form-control" id="nimi">
+                </div>
+                <div class="form-group">
+                    <label for="nimi">Nimi</label>
+                    <textarea placeholder="Kui on olulist infot..." class="form-control" name="markus" id="markus" rows="10"></textarea>
+                </div>
+                <a href="#" onclick="saadaKontakt()" class="btn btn-primary">Saada</a>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
