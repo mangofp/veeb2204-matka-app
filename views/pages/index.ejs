@@ -36,6 +36,22 @@
             </div>
         </div>
     </div>
+    <div class="container pt-3" id="matkaandmed">
+        <div class="row">
+            <% for (let i = 0; i < matkad.length; i++) { %>
+                <div class="card col-md-4 pt-4">
+                    <img src="<%= matkad[i].pildiUrl %>" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title"><%= matkad[i].nimetus %></h4>
+                        <p class="card-text">
+                            <%= matkad[i].kirjeldus %>
+                        </p>
+                        <a href="/registreerumine/<%= matkad[i].id %>" class="btn btn-primary" >Registreeru matkale</a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
     
 </body>
 </html>

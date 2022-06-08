@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matkaklubi - regsitreerumine</title>
+    
+    <%- include ("../partials/header.ejs") %>
+
+</head>
+<body>
+    <div class="container">
+        
+        <%- include ("../partials/matka_pais.ejs") %>
+
+        <div class="kontakt-sisu">
+
+            <div>
+                <img class="matka-pilt" src="<%= matk.pildiUrl %>" alt="">
+            </div>
+
+            <h2>Registreeru matkale <%= matk.nimetus %></h2>
+            <div class="mt-4 mb-4">
+                <%= matk.kirjeldus %>
+            </div>
+            <form action="/kinnitus" method="get">
+                <div class="form-group">
+                    <label for="nimi">Nimi</label>
+                    <input name="nimi" placeholder="sinu nimi ..." type="text" class="form-control" id="nimi">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input name="email" placeholder="sinu email ..." type="text" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="markus">Märkus</label>
+                    <textarea placeholder="Kui on olulist infot..." class="form-control" name="markus" id="markus" rows="10"></textarea>
+                </div>
+                <input type="hidden" name="id" value="<%= matk.id %>">
+                <input type="submit" class="btn btn-primary" value="Saada">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

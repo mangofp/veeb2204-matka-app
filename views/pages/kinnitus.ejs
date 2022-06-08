@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matkaklubi - regsitreerumine</title>
+    
+    <%- include ("../partials/header.ejs") %>
+
+</head>
+<body>
+    <div class="container">
+        
+        <%- include ("../partials/matka_pais.ejs") %>
+
+        <div class="kontakt-sisu">
+
+            <div>
+                <img class="matka-pilt" src="<%= matk.pildiUrl %>" alt="">
+            </div>
+
+            <h2>Oled registreerunud matkale <%= matk.nimetus %></h2>
+            <a href="/" class="btn btn-primary">Tagasi esilehele</a>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
