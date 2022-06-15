@@ -123,3 +123,12 @@ body {
         background-image: url('./assets/Hills@2x.png');
     }
 }
+
+/*Admin*/
+.admin-matk-menyy {
+    width: 100%;
+}
+
+#matkad-menyy {
+    background-color: bisque;
+}

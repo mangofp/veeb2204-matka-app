@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matkaklubi - regsitreerumine</title>
+    <title>Matkaklubi - kontakt</title>
     
     <%- include ("../partials/header.ejs") %>
 
@@ -14,19 +14,14 @@
         
         <%- include ("../partials/matka_pais.ejs") %>
 
-        <div class="kontakt-sisu">
-
-            <div>
-                <img class="matka-pilt" src="<%= matk.pildiUrl %>" alt="">
+        <div class="uudised-sisu">
+            <h2><%= uudis.pealkiri %></h2>
+            <div class="uudis-pilt">
+                <img src="<%= uudis.pildiUrl %>" alt="">
             </div>
-
-            <h2>Oled registreerunud matkale <%= matk.nimetus %></h2>
-            <div>
-                Matkal on nüüd <%= matk.osalejaid %> osalejat
+            <div class="uudis-sisu">
+                <%- uudis.tekst %>
             </div>
-            
-            <a href="/" class="btn btn-primary">Tagasi esilehele</a>
-            
         </div>
     </div>
     
