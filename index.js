@@ -146,10 +146,15 @@ async function registreeriMatkale(req, res) {
 
 async function lisaMatk(req, res) {
     const uusMatk = req.query
-    console.log('Uus lisatav matk:')
-    console.log(uusMatk)
     //TODO: Lisa uus matk andmebaasi kollektsiooni matkad
     //analoogiliselt uue registreerumise lisamisele
+    await client.connect();
+    const database = client.db(andmebaas)
+    const  matkadCol = database.collection("matkad")
+    const result = await matkadCol.insertOne(uusMatk)
+    console.log('Uus lisatav matk:')
+    console.log(uusMatk)
+    
     res.send(uusMatk)
 }
 
